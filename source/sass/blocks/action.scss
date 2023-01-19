@@ -1,0 +1,243 @@
+.action {
+  padding-top: 149px;
+  padding-bottom: 60px;
+
+  @include vp-1199 {
+    padding-top: 91px;
+  }
+
+  @include vp-767 {
+    padding-top: 66px;
+  }
+}
+
+.action__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 34px;
+  text-align: center;
+
+  @include font($ff-title, 54px, 65px, 600);
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    padding-right: 10px;
+    margin-bottom: 40px;
+
+    @include font($ff-title, 42px, 50px, 600);
+  }
+
+  @include vp-767 {
+    @include font($ff-title, 32px, 38px, 600);
+  }
+}
+
+.action__wrapper {
+  display: grid;
+  grid-template-columns: 560px 1fr;
+  column-gap: 40px;
+  min-height: 462px;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.action__image-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @include vp-1199 {
+    margin-bottom: 30px;
+
+    grid-template-columns: 41% 59%;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+}
+
+.action__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+
+  @include vp-767 {
+    object-fit: cover;
+    max-height: 299px;
+  }
+}
+
+.action__image-content-wrapper {
+  padding-left: 45px;
+  padding-top: 35px;
+  padding-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-torch-red-background;
+
+  @include vp-767 {
+    padding-left: 0;
+    align-items: center;
+  }
+}
+
+.action__text {
+  margin: 0;
+  padding: 0;
+
+  @include font($ff-text, 28px, 44px, 700, $color-default-white);
+}
+
+.action__number {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 24px;
+
+  @include font($ff-text, 70px, 57px, 700, $color-default-white);
+}
+
+.action__description {
+  margin: 0;
+  padding: 0;
+
+  @include font($ff-text, 18px, 25px, 400, $color-default-white);
+
+  @include vp-767 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+.action__link {
+  display: block;
+  margin-top: auto;
+
+  @include font($ff-text, 14px, 16px, 700, $color-default-white);
+  letter-spacing: 0.05em;
+  text-decoration: underline;
+  text-transform: uppercase;
+
+  @include hover-focus {
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        opacity: 0.8;
+      }
+
+      &.focus-visible:focus {
+        outline-offset: 2px;
+        outline: 1px solid $color-neon-blue;
+      }
+    }
+  }
+
+  @include active {
+    &.focus-visible:active {
+      opacity: 0.5;
+    }
+  }
+}
+
+.action__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 40px;
+
+  @include vp-1199 {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    min-height: 211px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+}
+
+.action__item {
+  display: flex;
+  flex-direction: column;
+  padding: 17px 0 29px 28px;
+  border-width: 7px;
+  border-style: solid;
+  border-image-source: linear-gradient(148.82deg, rgb(209, 10, 66) 0.85%, rgb(0, 53, 159) 100%);
+  border-image-slice: 1;
+  border-image-width: 1;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+
+  @include vp-1199 {
+    padding-bottom: 28px;
+  }
+
+  @include vp-767 {
+    padding: 30px 25px 40px;
+    align-items: center;
+  }
+}
+
+.action__item:first-child {
+  @include vp-1199 {
+    padding-right: 55px;
+  }
+
+  @include vp-767 {
+    padding-right: 25px;
+  }
+}
+
+.action__item-title {
+  margin: 0;
+  padding: 0;
+
+  @include font($ff-text, 26px, 42px, 700, $color-resolution-blue);
+}
+
+.action__item-text {
+  margin: 0;
+  padding: 0;
+
+  @include font($ff-text, 16px, 22px, 400, $color-resolution-blue);
+
+  @include vp-767 {
+    margin-bottom: 26px;
+    text-align: center;
+  }
+}
+
+.action__item-link {
+  display: block;
+  margin-top: auto;
+
+  @include font($ff-text, 12px, 14px, 700, $color-resolution-blue);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: underline;
+
+  @include hover-focus {
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        opacity: 0.8;
+      }
+
+      &.focus-visible:focus {
+        outline-offset: 2px;
+        outline: 1px solid $color-neon-blue;
+      }
+    }
+  }
+
+  @include active {
+    &.focus-visible:active {
+      opacity: 0.5;
+    }
+  }
+}

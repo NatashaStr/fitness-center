@@ -1,0 +1,176 @@
+.footer {
+  background-color: $color-black-russian;
+}
+
+.footer__wrapper {
+  padding: 50px 0 32px;
+  display: flex;
+
+  @include vp-1199 {
+    padding-bottom: 40px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    padding: 46px 0;
+  }
+}
+
+.footer__logo--desktop {
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.footer__logo--tablet {
+  display: none;
+
+  @include vp-1199 {
+    display: block;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.footer__logo--mobile {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+    margin-top: 7px;
+  }
+}
+
+.footer__nav {
+  min-width: 795px;
+
+  @include vp-1199 {
+    min-width: 533px;
+  }
+
+  @include vp-767 {
+    min-width: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.footer__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-767 {
+    display: block;
+    column-count: 2;
+  }
+}
+
+.footer__nav-item {
+  margin-right: 40px;
+  margin-top: -10px;
+
+  @include vp-1199 {
+    margin-right: 30px;
+    margin-top: -6px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+}
+
+.footer__nav-item:first-child {
+  margin-right: auto;
+  margin-top: 0;
+
+  @include vp-767 {
+    margin-bottom: 20px;
+  }
+}
+
+.footer__nav-item:last-child {
+  margin-right: 0;
+}
+
+.footer__nav-link {
+  @include font($ff-text, 14px, 16px, 400, $color-default-white);
+
+  @include vp-767 {
+    @include font($ff-text, 16px, 19px, 400, $color-default-white);
+  }
+
+  @include hover-focus {
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        opacity: 0.8;
+      }
+
+      &.focus-visible:focus {
+        outline-offset: 2px;
+        outline: 1px solid $color-neon-blue;
+      }
+    }
+  }
+
+  @include active {
+    &.focus-visible:active {
+      opacity: 0.5;
+    }
+  }
+}
+
+.footer__contacts-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer__social-wrapper {
+  margin-left: auto;
+
+  @include vp-1199 {
+    margin-top: -6px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+  }
+}
+
+.footer__contacts-item {
+  margin-right: 11px;
+}
+
+.footer__contacts-item:last-child {
+  margin-right: 0;
+}
+
+.footer__contacts-social-link {
+  fill: $color-default-white;
+
+  @include hover-focus {
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        opacity: 0.8;
+      }
+
+      &.focus-visible:focus {
+        outline-offset: 2px;
+        outline: 1px solid $color-neon-blue;
+      }
+    }
+  }
+
+  @include active {
+    &.focus-visible:active {
+      opacity: 0.5;
+    }
+  }
+}

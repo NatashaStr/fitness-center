@@ -1,14 +1,22 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {videoEnabled} from './modules/modals/video';
+import {activateTabs} from './modules/modals/tabs';
+import {initSwiperTrainers} from './modules/swiper-trainers';
+import {initSwiperReviews} from './modules/swiper-reviews';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
+  const swiper = document.querySelector('.swiper-container');
 
   // Utils
   // ---------------------------------
 
   iosVhFix();
+  activateTabs();
+  initSwiperTrainers(swiper);
+  initSwiperReviews(swiper);
 
   // Modules
   // ---------------------------------
@@ -17,6 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+    videoEnabled();
   });
 });
 

@@ -56,6 +56,12 @@
   }
 }
 
+@mixin vp-1199 {
+  @media (max-width: ($vp-1200 - 1px)) {
+    @content;
+  }
+}
+
 @mixin vp-1023 {
   @media (max-width: ($vp-1024 - 1px)) {
     @content;
@@ -73,6 +79,15 @@
     @content;
   }
 }
+
+@mixin font($font-family: $ff-text, $font-size: $fz-default, $line-height: $lh-default, $font-weight: $fw-default, $color: $color-sapphire) {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  color: $color;
+}
+
 
 // Mobile first
 

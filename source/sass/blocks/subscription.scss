@@ -1,0 +1,279 @@
+.subscription {
+  position: relative;
+  padding: 120px 0;
+  padding-bottom: 85px;
+  background-color: $color-ghost-white;
+
+  @include vp-1199 {
+    padding: 100px 0;
+  }
+
+  @include vp-767 {
+    padding: 110px 0;
+    padding-bottom: 70px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 321px;
+    height: 414px;
+    bottom: -72px;
+    right: -34px;
+    background-image: url("../img/pictures/gym-plates.png");
+    background-repeat: no-repeat;
+    z-index: 0;
+
+    @include vp-1199 {
+      width: 425px;
+      transform: scale(0.88);
+      bottom: -78px;
+      right: -58px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.subscription__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 13px;
+  text-align: center;
+
+  @include font($ff-title, 54px, 69px, 600);
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    margin-bottom: 22px;
+    padding-right: 12px;
+
+    @include font($ff-title, 42px, 50px, 600);
+  }
+
+  @include vp-767 {
+    @include font($ff-title, 32px, 38px, 600);
+  }
+}
+
+.subscription__tabs-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  max-width: 341px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+}
+
+.subscription__tabs-item {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 14px;
+  margin-right: 46px;
+  border: none;
+  background-color: transparent;
+
+  @include font($ff-text, 20px, 30px, 400);
+
+  @include vp-1199 {
+    margin-right: 54px;
+    padding-bottom: 10px;
+
+    @include font($ff-text, 18px, 27px, 600);
+  }
+
+  @include vp-767 {
+    margin-right: 43px;
+
+    @include font($ff-text, 16px, 24px, 600);
+  }
+}
+
+.subscription__tabs-item:last-child {
+  margin-right: 0;
+}
+
+.subscription__cards-wrapper {
+  display: none;
+}
+
+.subscription__cards-wrapper--active {
+  display: block;
+}
+
+.subscription__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-1199 {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.subscription__item {
+  position: relative;
+  max-width: 360px;
+  flex-grow: 1;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  padding: 52px 0;
+  background-color: $color-default-white;
+  border: 7px solid transparent;
+  z-index: 2;
+  cursor: pointer;
+
+  @include vp-1199 {
+    margin-right: 0;
+    margin-bottom: 35px;
+    min-width: 442px;
+    padding: 60px 0;
+  }
+
+  @include vp-767 {
+    max-width: 290px;
+    min-width: 100%;
+    margin-bottom: 47px;
+    padding: 40px 0;
+  }
+
+  @include hover-focus {
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        border: 7px solid;
+        border-image: linear-gradient(to right bottom, #d10a42, #00359f) 1;
+      }
+    }
+
+    &.focus-visible:focus {
+      border: 7px solid;
+      border-image: linear-gradient(to right bottom, #d10a42, #00359f) 1;
+    }
+  }
+}
+
+.subscription__item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.subscription__item:last-child {
+  @include vp-1199 {
+    margin-bottom: 0;
+  }
+}
+
+.subscription__item-title {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 10px;
+
+  @include font($ff-text, 26px, 29px, 700);
+
+  @include vp-767 {
+    @include font($ff-text, 22px, 24px, 700);
+  }
+}
+
+.subscription__text {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 15px;
+
+  @include font($ff-text, 16px, 24px, 400, $color-chambray);
+}
+
+.subscription__bg-sum {
+  display: block;
+  text-align: center;
+
+  @include font($ff-text, 100px, 150px, 700, $color-whisper);
+  opacity: 0.48;
+
+  @include vp-767 {
+    @include font($ff-text, 80px, 120px, 700, $color-whisper);
+  }
+}
+
+.subscription__price-wrapper {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -99px;
+  margin-bottom: 32px;
+  text-align: center;
+  z-index: 1;
+
+  @include vp-767 {
+    margin-top: -82px;
+  }
+}
+
+.subscription__sum {
+  margin-right: 10px;
+
+  @include font($ff-text, 60px, 90px, 700, $color-egyptian-blue);
+
+  @include vp-767 {
+    @include font($ff-text, 48px, 72px, 700, $color-egyptian-blue);
+  }
+}
+
+.subscription__link {
+  display: block;
+  max-width: 209px;
+  margin: 0 auto;
+  margin-top: 24px;
+  padding: 25px 44px;
+  border: 2px solid #102654;
+  text-align: center;
+
+  @include font($ff-text, 12px, 14px, 700, $color-sapphire);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  @include vp-767 {
+    margin-top: 20px;
+  }
+
+  @include hover-focus {
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        border: none;
+        background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+        color: $color-default-white;
+      }
+    }
+
+    &.focus-visible:focus {
+      border: none;
+      background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+      opacity: 0.8;
+      color: $color-default-white;
+    }
+  }
+
+  @include active {
+    &.focus-visible:active {
+      border: none;
+      background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+      opacity: 0.6;
+      color: $color-default-white;
+    }
+  }
+}
+
+.subscription__item:hover .subscription__link {
+  border: none;
+  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  color: $color-default-white;
+}

@@ -1,0 +1,226 @@
+.contacts__form-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contacts__user-wrapper {
+  padding: 56px 0 44px 103px;
+
+  background-color: $color-sapphire;
+
+  @include vp-1199 {
+    padding: 63px 0 67px 133px;
+  }
+
+  @include vp-767 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.contacts__form-title {
+  margin: 0;
+  margin-bottom: 18px;
+  padding: 0;
+
+  @include font($ff-title, 54px, 84px, 800, $color-default-white);
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    margin-bottom: 33px;
+
+    @include font($ff-title, 42px, 50px, 800, $color-default-white);
+  }
+
+  @include vp-767 {
+    margin-bottom: 35px;
+
+    @include font($ff-title, 32px, 38px, 600, $color-default-white);
+  }
+}
+
+.contacts__form {
+  display: flex;
+  flex-direction: column;
+  max-width: 410px;
+
+  @include vp-1199 {
+    min-width: 472px;
+  }
+
+  @include vp-767 {
+    min-width: 0;
+  }
+}
+
+.contacts__input-wrapper {
+  margin-bottom: 28px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: 30px;
+
+  @include vp-1199 {
+    grid-column: 60px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+  }
+}
+
+.contacts__user-wrapper input {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $color-light-slate-grey;
+
+  @include vp-767 {
+    width: 100%;
+    margin-bottom: 33px;
+  }
+}
+
+.contacts__user-wrapper input::placeholder {
+  @include font($ff-text, 14px, 16px, 400, $color-default-white);
+}
+
+.contacts__button {
+  padding: 18px 0;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include font($ff-text, 14px, 16px, 700, $color-default-white);
+  letter-spacing: 0.05em;
+
+  border: 3px solid $color-default-white;
+  background-color: transparent;
+  cursor: pointer;
+
+  @include hover-focus {
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        opacity: 0.8;
+      }
+
+      &.focus-visible:focus {
+        outline-offset: 2px;
+        outline: 1px solid $color-neon-blue;
+      }
+    }
+  }
+
+  @include active {
+    &.focus-visible:active {
+      opacity: 0.5;
+    }
+  }
+}
+
+.contacts__address-wrapper {
+  padding: 58px 0 44px 124px;
+
+  @include vp-1199 {
+    padding: 61px 0 40px 132px;
+  }
+
+  @include vp-767 {
+    padding: 64px 0 40px 16px;
+  }
+}
+
+.contacts__address-title {
+  margin: 0;
+  margin-bottom: 36px;
+  padding: 0;
+
+  @include font($ff-title, 54px, 65px, 600);
+  letter-spacing: 0.03em;
+
+  @include vp-1199 {
+    margin-bottom: 33px;
+
+    @include font($ff-title, 42px, 50px, 600);
+  }
+
+  @include vp-767 {
+    margin-bottom: 33px;
+
+    @include font($ff-title, 32px, 38px, 600);
+  }
+}
+
+.contacts__inner-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+
+  @include vp-1199 {
+    column-gap: 0;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.contacts__section-wrapper {
+  margin-bottom: 20px;
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.contacts__section-wrapper--third {
+  @include vp-767 {
+    order: 1;
+  }
+}
+
+.contacts__section-wrapper--second {
+  @include vp-767 {
+    order: 2;
+  }
+}
+
+.contacts__section-wrapper--fourth {
+  @include vp-767 {
+    order: 3;
+  }
+}
+
+.contacts__title-text {
+  margin: 0;
+  padding: 0;
+
+  @include font($ff-text, 16px, 24px, 700);
+
+  @include vp-1199 {
+    margin-bottom: 6px;
+
+    @include font($ff-text, 20px, 30px, 700);
+  }
+}
+
+.contacts__content-text {
+  margin: 0;
+  padding: 0;
+
+  @include font($ff-text, 14px, 21px, 400);
+  font-style: normal;
+
+  @include vp-1199 {
+    @include font($ff-text, 18px, 27px, 400);
+  }
+}
