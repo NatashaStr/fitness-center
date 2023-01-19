@@ -168,6 +168,7 @@
   margin-top: -6px;
   margin-left: 14px;
   align-self: start;
+  display: block;
 
   @include font($ff-text, 12px, 14px, 700, $color-default-white);
   letter-spacing: 0.05em;

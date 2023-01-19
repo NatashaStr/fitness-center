@@ -1805,6 +1805,7 @@ button,
   margin-left: 14px;
   -ms-grid-row-align: start;
   align-self: start;
+  display: block;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 12px;
   line-height: 14px;
@@ -2122,6 +2123,10 @@ button,
   color: #103aae;
 }
 
+.subscription__ruble--mobile {
+  display: none;
+}
+
 .subscription__link {
   display: block;
   max-width: 209px;
@@ -2160,6 +2165,10 @@ button,
   background: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
   background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
   color: #ffffff;
+}
+
+.subscription__tabs-item--active {
+  border-bottom: 2px solid #d10a42;
 }
 
 .promo {
@@ -2489,6 +2498,13 @@ button,
   background-color: #f8f9fc;
 }
 
+.advantages__container {
+  width: 100%;
+  max-width: 1224px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
 .advantages__title {
   margin: 0;
   padding: 0;
@@ -2685,6 +2701,9 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   background-color: #ed0233;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .action__text {
@@ -2754,6 +2773,9 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
   padding: 17px 0 29px 28px;
   border-width: 7px;
   border-style: solid;
@@ -2953,17 +2975,23 @@ button,
   display: grid;
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
-  -ms-grid-column: 30;
-  grid-column: 30px;
+  -webkit-column-gap: 60px;
+  -moz-column-gap: 60px;
+  column-gap: 60px;
 }
 
 .contacts__user-wrapper input {
   margin: 0;
   padding: 0;
   padding-bottom: 5px;
+  width: 100%;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #74819c;
+}
+
+.contacts__user-wrapper input.focus-visible:active.focus-visible:active {
+  opacity: 0.5;
 }
 
 .contacts__user-wrapper input::-webkit-input-placeholder {
@@ -3042,6 +3070,7 @@ button,
 }
 
 .contacts__inner-wrapper {
+  position: relative;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -3049,6 +3078,19 @@ button,
   -webkit-column-gap: 20px;
   -moz-column-gap: 20px;
   column-gap: 20px;
+}
+
+.contacts__inner-wrapper::after {
+  position: absolute;
+  content: "";
+  width: 102px;
+  height: 1px;
+  right: 50%;
+  top: 41%;
+  background-color: #74819c;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .contacts__section-wrapper {
@@ -3074,6 +3116,10 @@ button,
   font-weight: 400;
   color: #102654;
   font-style: normal;
+}
+
+.contacts__link.focus-visible:active.focus-visible:active {
+  opacity: 0.5;
 }
 
 .footer {
@@ -3299,7 +3345,7 @@ button,
   }
 
   .intro__text-wrapper {
-    max-width: 502px;
+    max-width: 504px;
     text-align: center;
   }
 
@@ -3562,6 +3608,10 @@ button,
     padding: 93px 0;
   }
 
+  .advantages__container {
+    padding: 0 45px;
+  }
+
   .advantages__title {
     padding-left: 0;
     padding-right: 20px;
@@ -3680,7 +3730,7 @@ button,
   }
 
   .action__item:first-child {
-    padding-right: 55px;
+    padding-right: 60px;
   }
 
   .reviews {
@@ -3721,8 +3771,9 @@ button,
   }
 
   .contacts__input-wrapper {
-    -ms-grid-column: 60;
-    grid-column: 60px;
+    -webkit-column-gap: 60px;
+    -moz-column-gap: 60px;
+    column-gap: 60px;
   }
 
   .contacts__address-wrapper {
@@ -3744,8 +3795,14 @@ button,
     column-gap: 0;
   }
 
+  .contacts__inner-wrapper::after {
+    width: 129px;
+    right: 48%;
+    top: 43%;
+  }
+
   .contacts__title-text {
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     font-family: "Roboto Condensed", "Arial", sans-serif;
     font-size: 20px;
     line-height: 30px;
@@ -3990,12 +4047,21 @@ button,
     color: #103aae;
   }
 
+  .subscription__ruble {
+    display: none;
+  }
+
+  .subscription__ruble--mobile {
+    display: block;
+  }
+
   .subscription__link {
     margin-top: 20px;
+    padding: 24px 44px;
   }
 
   .promo {
-    padding: 75px 0;
+    padding: 80px 0;
     padding-bottom: 64px;
   }
 
@@ -4067,6 +4133,10 @@ button,
     padding-bottom: 20px;
   }
 
+  .advantages__container {
+    padding: 0;
+  }
+
   .advantages__title {
     font-family: "Alumni Sans", "Arial", sans-serif;
     font-size: 32px;
@@ -4105,7 +4175,7 @@ button,
   }
 
   .advantages__content-text {
-    padding: 0 20px;
+    padding: 0 40px;
     text-align: center;
   }
 
@@ -4336,6 +4406,10 @@ button,
     flex-direction: column;
   }
 
+  .contacts__inner-wrapper::after {
+    display: none;
+  }
+
   .contacts__section-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4362,6 +4436,10 @@ button,
     -webkit-box-ordinal-group: 4;
     -ms-flex-order: 3;
     order: 3;
+  }
+
+  .contacts__title-text {
+    margin-bottom: 6px;
   }
 
   .footer__wrapper {
@@ -4476,11 +4554,29 @@ button,
     outline: 1px solid #2c39f2;
   }
 
+  .contacts__user-wrapper input.focus-visible:focus:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .contacts__user-wrapper input.focus-visible:focus.focus-visible:focus {
+    outline-offset: 2px;
+    outline: 1px solid #2c39f2;
+  }
+
   .contacts__button.focus-visible:focus:hover:not(.focus-visible) {
     opacity: 0.8;
   }
 
   .contacts__button.focus-visible:focus.focus-visible:focus {
+    outline-offset: 2px;
+    outline: 1px solid #2c39f2;
+  }
+
+  .contacts__link.focus-visible:focus:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .contacts__link.focus-visible:focus.focus-visible:focus {
     outline-offset: 2px;
     outline: 1px solid #2c39f2;
   }
@@ -4546,11 +4642,29 @@ button,
     outline: 1px solid #2c39f2;
   }
 
+  .contacts__user-wrapper input:hover:not(.focus-visible):hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .contacts__user-wrapper input:hover:not(.focus-visible).focus-visible:focus {
+    outline-offset: 2px;
+    outline: 1px solid #2c39f2;
+  }
+
   .contacts__button:hover:not(.focus-visible):hover:not(.focus-visible) {
     opacity: 0.8;
   }
 
   .contacts__button:hover:not(.focus-visible).focus-visible:focus {
+    outline-offset: 2px;
+    outline: 1px solid #2c39f2;
+  }
+
+  .contacts__link:hover:not(.focus-visible):hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .contacts__link:hover:not(.focus-visible).focus-visible:focus {
     outline-offset: 2px;
     outline: 1px solid #2c39f2;
   }
