@@ -66,12 +66,16 @@
   margin: 0 auto;
   margin-bottom: 40px;
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+
+  @include vp-767 {
+    margin-bottom: 38px;
+  }
 }
 
 .subscription__tabs-item {
   margin: 0;
   padding: 0;
-  padding-bottom: 14px;
+  padding-bottom: 11px;
   margin-right: 46px;
   border: none;
   background-color: transparent;
@@ -87,6 +91,7 @@
 
   @include vp-767 {
     margin-right: 43px;
+    padding-bottom: 12px;
 
     @include font($ff-text, 16px, 24px, 600);
   }
@@ -208,10 +213,14 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: -99px;
+  margin-top: -29%;
   margin-bottom: 32px;
   text-align: center;
   z-index: 1;
+
+  @include vp-1199 {
+    margin-top: -24%;
+  }
 
   @include vp-767 {
     margin-top: -82px;

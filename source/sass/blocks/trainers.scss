@@ -57,7 +57,7 @@
   min-height: 294px;
 
   @include vp-767 {
-    margin-right: 9px;
+    margin-right: 24px;
   }
 }
 
@@ -82,6 +82,11 @@
   transform: translateX(-50%);
 
   @include font($ff-text, 18px, 27px, 700, $color-default-white);
+
+  @include vp-1199 {
+    bottom: 4px;
+    left: 51%;
+  }
 }
 
 .trainers__image {
@@ -121,6 +126,14 @@
   padding: 0;
 
   @include font($ff-text, 18px, 27px, 700, $color-default-white);
+
+  @include vp-1199 {
+    margin-left: 9px;
+  }
+
+  @include vp-767 {
+    margin-left: 0;
+  }
 }
 
 .trainers__content-text {
@@ -129,6 +142,14 @@
   margin-bottom: 32px;
 
   @include font($ff-text, 16px, 24px, 400, $color-spindle);
+
+  @include vp-1199 {
+    margin: -5px 0 35px -5px;
+  }
+
+  @include vp-767 {
+    margin: -3px 0 35px 0;
+  }
 }
 
 .trainers__content-list {
@@ -138,7 +159,7 @@
 
   list-style-type: disc;
 
-  @include vp-767 {
+  @include vp-1199 {
     padding-left: 16px;
   }
 }

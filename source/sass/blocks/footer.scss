@@ -3,11 +3,12 @@
 }
 
 .footer__wrapper {
-  padding: 50px 0 32px;
+  padding: 55px 0 32px;
   display: flex;
 
   @include vp-1199 {
     padding-bottom: 40px;
+    padding-top: 50px;
   }
 
   @include vp-767 {
@@ -51,7 +52,7 @@
   }
 
   @include vp-767 {
-    min-width: 0;
+    min-width: 302px;
     margin-bottom: 20px;
   }
 }
@@ -62,6 +63,7 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  max-width: 1060px;
 
   @include vp-767 {
     display: block;
@@ -72,6 +74,7 @@
 .footer__nav-item {
   margin-right: 40px;
   margin-top: -10px;
+  margin-bottom: 10px;
 
   @include vp-1199 {
     margin-right: 30px;
@@ -87,6 +90,7 @@
 .footer__nav-item:first-child {
   margin-right: auto;
   margin-top: 0;
+  padding-right: 30px;
 
   @include vp-767 {
     margin-bottom: 20px;
@@ -130,6 +134,7 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  max-width: 120px;
 }
 
 .footer__social-wrapper {

@@ -1,5 +1,5 @@
 .promo {
-  padding: 120px 0;
+  padding: 124px 0;
   padding-bottom: 106px;
 
   @include vp-1199 {
@@ -222,6 +222,8 @@
 }
 
 .promo__image {
+  height: 100%;
+
   @include vp-1199 {
     min-height: 292px;
     object-fit: cover;
