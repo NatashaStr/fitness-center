@@ -221,6 +221,14 @@
   }
 }
 
+.promo__image-wrapper {
+  @include vp-767 {
+    display: flex;
+    justify-content: center;
+    background-color: #040546;
+  }
+}
+
 .promo__image {
   height: 100%;
 
