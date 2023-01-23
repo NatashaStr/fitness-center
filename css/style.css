@@ -2425,7 +2425,10 @@ button,
 .trainers__content-wrapper {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   width: 100%;
   height: 100%;
   display: none;
@@ -4140,6 +4143,16 @@ button,
 
   .promo__content-wrapper {
     padding-bottom: 50px;
+  }
+
+  .promo__image-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #040546;
   }
 
   .trainers {
