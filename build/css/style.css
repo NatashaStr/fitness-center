@@ -1321,6 +1321,7 @@ html {
   font-family: "Placeholder", "Arial", sans-serif;
   color: #000000;
   scroll-behavior: smooth;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -1329,6 +1330,7 @@ html {
 body {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
   background-color: #ffffff;
 }
 
@@ -2382,6 +2384,12 @@ button,
   position: relative;
   min-width: 260px;
   min-height: 294px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .trainers__item:hover .trainers__image-title,
@@ -2991,6 +2999,7 @@ button,
   padding: 0;
   padding-bottom: 5px;
   width: 100%;
+  color: #ffffff;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #74819c;

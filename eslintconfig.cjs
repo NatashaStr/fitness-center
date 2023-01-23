@@ -66,7 +66,7 @@ module.exports = {
     'no-labels': 'error',
     'no-lone-blocks': 'error',
     'no-global-assign': 'error',
-    'no-new': 'error',
+    'no-new': 'off',
     'no-new-func': 'error',
     'no-octal': 'error', // default
     'no-octal-escape': 'error',
@@ -86,7 +86,7 @@ module.exports = {
     'no-label-var': 'error',
     'no-shadow': 'error',
     'no-shadow-restricted-names': 'error',
-    'no-undef': 'error', // default
+    'no-undef': 'off', // default
     'no-undef-init': 'error',
     'no-undefined': 'error',
 

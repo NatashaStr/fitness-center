@@ -55,6 +55,8 @@
   position: relative;
   min-width: 260px;
   min-height: 294px;
+  display: flex;
+  justify-content: center;
 
   @include vp-767 {
     margin-right: 24px;

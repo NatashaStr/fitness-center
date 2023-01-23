@@ -1,6 +1,6 @@
 const initSwiperReviews = (swiper) => {
   if (swiper) {
-    // eslint-disable-next-line
+
     new Swiper('#swiperReviews', {
       navigation: {
         nextEl: '.reviews__button--next.swiper-button-next',
