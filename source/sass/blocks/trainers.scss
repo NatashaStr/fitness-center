@@ -1,6 +1,5 @@
 .trainers {
   width: 100%;
-  max-width: 1224px;
   margin: 0 auto;
   padding: 0 32px;
   margin-bottom: 91px;
@@ -10,23 +9,31 @@
   }
 
   @include vp-767 {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
   }
 }
 
 .trainers__container {
   position: relative;
+  max-width: 1272px;
+  width: 89.11%;
+  margin: 0 auto;
 
   @include vp-1199 {
     max-width: 566px;
     margin: 0 auto;
   }
+
+  @include vp-767 {
+    width: 89.11%;
+  }
 }
 
 .trainers__title {
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 48px;
   padding: 0;
+  max-width: 1160px;
 
   @include font($ff-title, 54px, 65px, 600);
   letter-spacing: 0.03em;
@@ -59,7 +66,9 @@
   justify-content: center;
 
   @include vp-767 {
+    min-width: 226px;
     margin-right: 24px;
+    min-height: 276px;
   }
 }
 
@@ -75,6 +84,10 @@
 
 .trainers__image-wrapper {
   position: relative;
+
+  @include vp-767 {
+    width: 100vw;
+  }
 }
 
 .trainers__image-title {
@@ -98,8 +111,9 @@
   }
 
   @include vp-767 {
-    width: 226px;
-    height: 274px;
+    width: 100%;
+    max-height: 100%;
+    min-height: 276px;
   }
 }
 
@@ -119,8 +133,8 @@
 
   @include vp-767 {
     padding: 42px 0;
-    max-width: 226px;
-    max-height: 274px;
+    min-height: 274px;
+    width: 100%;
   }
 }
 
@@ -189,8 +203,8 @@
   }
 
   @include vp-767 {
-    top: 41%;
-    left: -23px;
+    top: 44%;
+    left: -38px;
 
     &::after {
       content: url("../img/svg/arrow-left-mobile.svg");
@@ -212,8 +226,8 @@
   }
 
   @include vp-767 {
-    top: 41%;
-    right: -23px;
+    top: 44%;
+    right: -38px;
 
     &::after {
       content: url("../img/svg/arrow-right-mobile.svg");

@@ -46,6 +46,7 @@
 
 .header__nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -102,7 +103,9 @@
   }
 
   @include vp-767 {
-    margin-top: 33px;
+    align-self: start;
+    grid-row: 2 / 3;
+    margin-top: 41px;
     margin-right: -26px;
   }
 }
@@ -170,6 +173,7 @@
   align-self: start;
   display: block;
   text-align: center;
+  max-width: 238px;
 
   @include font($ff-text, 12px, 14px, 700, $color-default-white);
   letter-spacing: 0.05em;
@@ -186,6 +190,7 @@
     grid-column: 1 / 3;
     margin-left: 0;
     text-align: center;
+    max-width: 100%;
   }
 }
 

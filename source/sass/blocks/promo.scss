@@ -175,6 +175,7 @@
   margin-bottom: 44px;
   padding: 0;
   padding-right: 65px;
+  max-width: 350px;
 
   @include font($ff-text, 18px, 27px, 400, $color-default-white);
 

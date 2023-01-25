@@ -54,6 +54,8 @@
   position: relative;
   z-index: 0;
   width: 83.3%;
+  background-color: $color-resolution-blue;
+  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
 }
 
 .reviews__list {
@@ -68,9 +70,6 @@
   grid-template-columns: 142px 1fr;
   column-gap: 28px;
   padding-bottom: 58px;
-
-  background-color: $color-resolution-blue;
-  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
 
   @include vp-1199 {
     column-gap: 30px;

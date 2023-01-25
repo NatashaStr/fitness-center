@@ -68,7 +68,7 @@
 
   @include vp-767 {
     object-fit: cover;
-    max-height: 299px;
+    max-height: 93vw;
   }
 }
 
@@ -168,7 +168,7 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  padding: 17px 0 29px 28px;
+  padding: 17px 28px 29px 28px;
   border-width: 7px;
   border-style: solid;
   border-image-source: linear-gradient(148.82deg, rgb(209, 10, 66) 0.85%, rgb(0, 53, 159) 100%);
