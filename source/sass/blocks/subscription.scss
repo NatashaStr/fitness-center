@@ -79,14 +79,14 @@
   margin: 0;
   padding: 0;
   padding-bottom: 11px;
-  margin-right: 46px;
+  margin-right: 43px;
   border: none;
   background-color: transparent;
 
   @include font($ff-text, 20px, 30px, 400);
 
   @include vp-1199 {
-    margin-right: 54px;
+    margin-right: 50px;
     padding-bottom: 10px;
 
     @include font($ff-text, 18px, 27px, 600);
